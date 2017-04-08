@@ -1,0 +1,50 @@
+$header-height: 50px;
+$header-color: #fff;
+$header-bg-color: $themecolor;
+$logo-width: 120px;
+$li-hover-color: lighten($themecolor,10%);
+$ipt-color: lighten($themecolor,10%);
+
+header {
+	width: 100%;
+	height: $header-height;
+	color: $header-color;
+	background-color: $header-bg-color;
+	font-size: $font-size-base;
+	margin-bottom: 15px;
+	.header-nav {
+		box-sizing: border-box;
+		padding-left: $logo-width;
+		width: $width;
+		margin: 0 auto;
+		background: url("../img/logo.png") 10px 12px no-repeat;
+		background-size: 107px 30px ;
+		ul.ul-left {
+			float: left;
+			li {
+				padding: 0 20px;
+				height: $header-height;
+				line-height: $header-height;
+				float: left;
+				cursor: pointer;
+			}
+		}
+		.ipt {
+			margin: 8px;
+		    background: lighten($themecolor,10%) none repeat scroll 0 0;
+		    border: medium none;
+		    border-bottom-right-radius: 2px;
+		    border-top-right-radius: 2px;
+		    color: #ddd;
+		    height: 34px;
+		    outline: 0 none;
+		    text-indent: 14px;
+		    transition: width 0.5s ease 0s;
+		    width: 180px;
+		    &:focus {
+		    	width: 320px;
+		    }
+		}
+	}
+	
+}

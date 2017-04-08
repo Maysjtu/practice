@@ -1,0 +1,25 @@
+.feed-title {
+	width: $main-width;
+	height: 60px;
+	margin-bottom: $margin-small;
+	ul li {
+		color: #999;
+		width: 266px;
+		height: 57px;
+		line-height: 57px;
+		text-align: center;
+		border-right: 1px solid #999;
+		border-bottom: 3px solid #999; 
+		float: left;
+		background-color: #FFF;
+		font-size: 120%;
+		cursor: pointer;
+	}
+	ul li:last-child {
+		border-right: none;
+	}
+	ul li.active {
+		color: $link-hover-color;
+		border-bottom: 3px solid $link-hover-color; 
+	}
+}

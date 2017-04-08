@@ -1,0 +1,62 @@
+$goods-box-width: 256px;
+$goods-box-margin-right: 15px;
+$goods-box-bg-color: #fff;
+$user-portrait-width: 35px;
+
+.goods {
+	width: $goods-box-width;
+	overflow:hidden; 
+	margin-right: $goods-box-margin-right;
+	a {
+		color: $gray-light;
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+	.img {
+		@include img-box(0,$goods-box-width,$goods-box-width,#333,rgba(255,255,255,0.6));
+
+	}
+	.intro {
+		height: 40px;
+		background-color: $goods-box-bg-color;
+		padding: 12px 20px;
+		color: $gray-light;
+		font-size: $font-size-base - 2;
+		margin-bottom: 1px;
+	}
+	.text {
+		height: 130px;
+		background-color: $goods-box-bg-color;
+		padding: 15px 20px;
+		font-size: $font-size-base - 2;
+		position: relative;
+		.user {
+			height: 35px;
+			line-height: 35px;
+			color: $gray;
+			margin-bottom: 10px;
+			img {
+				vertical-align: middle;
+				display: inline-block;
+				width: $user-portrait-width;
+				height: $user-portrait-width;
+				border-radius: 100%;
+				margin-right: 15px;
+			} 
+		}
+		p {
+			line-height: $line-height-computed - 2 ;
+			color: $gray-dark;
+		}
+		.more {
+			a {
+				color: $link-hover-color;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+}

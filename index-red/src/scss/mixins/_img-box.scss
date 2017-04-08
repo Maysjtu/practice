@@ -1,0 +1,19 @@
+@mixin img-box($border-radius,$width,$height,$desc-color,$desc-bg-color) {
+	width: $width;
+	height: $height;
+	border-radius: $border-radius;
+	position: relative;
+	img {
+		width: $width;
+		height: $height;
+	}
+	.desc {
+		position: absolute;
+		color: $desc-color;
+		padding: 7px 20px;
+		font-size: 12px;
+		bottom: 0;
+		right: 0;
+		background-color: $desc-bg-color;
+	}
+}

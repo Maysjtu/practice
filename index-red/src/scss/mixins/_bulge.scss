@@ -1,0 +1,12 @@
+@mixin bulge($border-radius,$width,$height,$color,$left,$top,$rotate){
+	content: " ";
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+	border-radius: $border-radius;
+	background-color: $color;
+	transform: rotate($rotate);
+	left: $left;
+	top: $top;
+}

@@ -1,0 +1,113 @@
+$em-color: saturate($themecolor,20%);
+$feed-box-height: 310px;
+$feed-intro-width: 460px;
+.feed-box {
+	width: $main-width;
+	height: $feed-box-height;
+	box-sizing: border-box;
+	padding: 30px;
+	margin-bottom: $margin-base;
+	background-color: #FFF;
+	border-radius: $border-radius-base;
+	a {
+		@include link-style(#333,$link-hover-color)
+	}
+	.img {
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+		@include img-box(0,250px,250px,#333,rgba(255,255,255,0.6));
+		@include link-style(#000,#000);
+	}	
+	.intro {
+		width: $feed-intro-width;
+		height: 195px;	
+		margin-top: 5px;
+		display: inline-block;
+		float: right;
+		h1 {
+			margin: 0 0 15px 0;
+			color: #333;
+			font: {
+				size: 125%;
+				weight: 500;
+			}
+		}
+		p.plant {
+			text-indent: 2em;
+		}
+		p {
+			color: #666;
+			line-height: 25px;
+			font: {
+				size: 100%;
+				weight: 300;
+			}
+			margin-bottom: 15px;
+		}
+		.unity-price {
+			color: $em-color;
+			font: {
+				size: 24px;
+				weight: 500;
+			}
+		}
+		.del-price {
+			text-decoration: line-through;
+		}
+		.rest-time {
+			color: $em-color;
+			font: {
+				size: 20px;
+				weight: 500;
+			}
+		}
+		.recent-price {
+			color: $em-color;
+			font-weight: 400;
+		}
+	}
+	.user-info {
+		width: $feed-intro-width;
+		height: 50px;
+		float: right;
+		a {
+			display: inline-block;
+			height: 35px;
+			line-height: 35px;
+		}
+		.user {
+			width: 380px;
+			float: left;
+			height: 35px;
+			line-height: 35px;
+			color: #666;
+			font: {
+				size: 14px;
+			}
+			img {
+				vertical-align: middle;
+				display: inline-block;
+				width: 35px;
+				height: 35px;
+				border-radius: 100%;
+				margin-right: 15px;
+			} 
+		}
+		.star {
+			float: right;
+			width: 60px;
+			height: 42px;
+			color: #999;;
+			border-left: 1px solid #999;
+			text-align: center;
+			cursor: pointer;
+			.icon-collect {
+
+				display: block;
+				margin: 3px auto;
+			}
+		}
+	}
+
+}

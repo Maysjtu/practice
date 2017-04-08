@@ -1,0 +1,238 @@
+.banner-sec {
+  width: 800px;
+  height: 310px;
+  margin-bottom: 10px;
+}
+
+.banner-sec-left {
+  box-sizing: border-box;
+  float: left;
+  width: 190px;
+  height: 310px;
+  margin-right: 10px;
+  background-color: #FFF;
+  border-radius: 4px;
+  font-size: 90%;
+}
+.banner-sec-left a {
+  color: #666;
+}
+.banner-sec-left a:hover {
+  color: #e62f2f;
+  text-decoration: underline;
+}
+.banner-sec-left .hotspot, .banner-sec-left .topic {
+  padding: 6px 12px;
+}
+.banner-sec-left .hotspot h1, .banner-sec-left .topic h1 {
+  color: #000;
+  padding-left: 25px;
+  font-size: 125%;
+  font-weight: normal;
+}
+.banner-sec-left .hotspot {
+  height: 140px;
+  border-bottom: 1px dashed #aaa;
+}
+.banner-sec-left .hotspot h1 {
+  background: url("../img/hotspot.png") 3px 5px no-repeat;
+}
+.banner-sec-left .hotspot ul > li {
+  float: left;
+  height: 30px;
+  padding: 0 8px;
+}
+.banner-sec-left .topic {
+  height: 140px;
+}
+.banner-sec-left .topic h1 {
+  background: url("../img/topic.png") 3px 5px no-repeat;
+}
+.banner-sec-left .topic ul > li {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 10px;
+  line-height: 26px;
+}
+
+.banner-sec-right {
+  float: left;
+  width: 600px;
+  height: 310px;
+}
+.banner-sec-right .main-banner {
+  width: 600px;
+  height: 220px;
+  margin-bottom: 10px;
+}
+.banner-sec-right .main-banner img {
+  width: 600px;
+  height: 220px;
+}
+.banner-sec-right .aside-banner {
+  height: 80px;
+}
+.banner-sec-right .aside-banner ul li {
+  float: left;
+  width: 194px;
+  height: 80px;
+  margin-right: 9px;
+}
+.banner-sec-right .aside-banner ul li img {
+  width: 194px;
+  height: 80px;
+}
+.banner-sec-right .aside-banner ul > li:last-child {
+  margin-right: 0;
+}
+
+.feed-title {
+  width: 800px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+.feed-title ul li {
+  color: #999;
+  width: 266px;
+  height: 57px;
+  line-height: 57px;
+  text-align: center;
+  border-right: 1px solid #999;
+  border-bottom: 3px solid #999;
+  float: left;
+  background-color: #FFF;
+  font-size: 120%;
+  cursor: pointer;
+}
+.feed-title ul li:last-child {
+  border-right: none;
+}
+.feed-title ul li.active {
+  color: #e62f2f;
+  border-bottom: 3px solid #e62f2f;
+}
+
+.feed-box {
+  width: 800px;
+  height: 310px;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border-radius: 4px;
+}
+.feed-box a {
+  color: #333;
+}
+.feed-box a:hover {
+  color: #e62f2f;
+  text-decoration: none;
+}
+.feed-box .img {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 0;
+  position: relative;
+  color: #000;
+}
+.feed-box .img img {
+  width: 250px;
+  height: 250px;
+}
+.feed-box .img .desc {
+  position: absolute;
+  color: #333;
+  padding: 7px 20px;
+  font-size: 12px;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.feed-box .img:hover {
+  color: #000;
+  text-decoration: none;
+}
+.feed-box .intro {
+  width: 460px;
+  height: 195px;
+  margin-top: 5px;
+  display: inline-block;
+  float: right;
+}
+.feed-box .intro h1 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 125%;
+  font-weight: 500;
+}
+.feed-box .intro p.plant {
+  text-indent: 2em;
+}
+.feed-box .intro p {
+  color: #666;
+  line-height: 25px;
+  font-size: 100%;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.feed-box .intro .unity-price {
+  color: #e62f2f;
+  font-size: 24px;
+  font-weight: 500;
+}
+.feed-box .intro .del-price {
+  text-decoration: line-through;
+}
+.feed-box .intro .rest-time {
+  color: #e62f2f;
+  font-size: 20px;
+  font-weight: 500;
+}
+.feed-box .intro .recent-price {
+  color: #e62f2f;
+  font-weight: 400;
+}
+.feed-box .user-info {
+  width: 460px;
+  height: 50px;
+  float: right;
+}
+.feed-box .user-info a {
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+}
+.feed-box .user-info .user {
+  width: 380px;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  color: #666;
+  font-size: 14px;
+}
+.feed-box .user-info .user img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.feed-box .user-info .star {
+  float: right;
+  width: 60px;
+  height: 42px;
+  color: #999;
+  border-left: 1px solid #999;
+  text-align: center;
+  cursor: pointer;
+}
+.feed-box .user-info .star .icon-collect {
+  display: block;
+  margin: 3px auto;
+}

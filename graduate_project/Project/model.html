@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>模型分析</title>
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="Keywords" content="水质模型、计算系统、案例分析">
+	<meta name="description" content="一个基于Web的污染物水质模型计算系统，包括零维水质模型、一维水质模型和湖库水质模型的分析和计算，以及具体案例分析。">
+</head>
+<body>
+	<header>
+		<h1>
+        污染物环境毒理效应计算系统
+		</h1>
+	</header>
+	<div id="container">
+		<nav id="nav">
+			<ul class="navli">
+				<li><a href="index.html"><i class="fa fa-globe" aria-hidden="true"></i>案例分析</a></li>
+				<li class="active"><a href="model.html"><i class="fa fa-bar-chart"></i>模型分析</a></li>
+				<li><a href="table.html"><i class="fa fa-file-text"></i> 附&nbsp;&nbsp;&nbsp;表&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+				<li><a href="link.html"><i class="fa fa-star"></i>友情链接</a></li>
+			</ul>
+		</nav>
+		<div class="main-right clearfix">	
+		<div class="display">
+			<section class="part" id="part1">
+				<h2>水质模型</h2>
+				<ol>
+					<li><a href="#a1">1. 零维水质模型</a></li>
+					<li><a href="#a2">2. 一维水质模型</a></li>
+					<li><a href="#a3">3. 湖库水质模型</a></li>
+				</ol>
+				<h3 id="a1">1. 零维水质模型（完全混合模型）</h3>
+				<p>
+					如果研究的河段是恒定均匀流，且排污量也是恒定不变的。当污染物是既不分解，也不沉淀的保守物质时，河段水质模型为&emsp;
+				</p>
+				<img src="images/formula1.png" alt="formula" width="130" style="display: block;margin: 0 auto;">
+				<p>
+					式中，C<sub>1</sub>，C<sub>2</sub>，C分别表示河流中原有的、入河污水的、河水与污水均匀混合后的污染物浓度（mg/L）;Q，q分别为大河流量和污水排入流量（m<sup>3</sup>/s）。
+				</p>
+
+					<p>
+						当污染物是非保守可降解物质时，水质方程则为
+					</p>
+					<img src="images/formula2.png" alt="formula" width="180" style="display: block;margin: 0 auto;">
+				<div class="cal clearfix" id="water0">
+					<div class="cal-left">
+						<label>河水流量Q<sub>1</sub>：
+							<input type="text" class="q1"><span>m<sup>3</sup>/s</span></label>
+							<label>河水浓度C<sub>1</sub>：
+							<input type="text" class="c1"><span>mg/L</span></label>
+						<label >污水流量Q<sub>2</sub>：
+						<input type="text" class="q2"><span>m<sup>3</sup>/s</span>
+						</label>
+						<label>污水浓度C<sub>2</sub>：
+								<input type="text" class="c2"><span>mg/L</span>
+						</label>
+						<label>消减系数k（选填）：
+								<input type="text" class="k">
+						</label>
+					</div>
+					<div class="cal-middle">
+						<span class="button" id="cal-water0">计算 <i class="fa fa-arrow-right"></i></span>
+					</div>
+					<div class="cal-right">
+						<p>混合后污染物浓度：<span class="c">____</span>mg/L</p>
+					</div>
+				</div>
+
+				<h3 id="a2">2. 一维水质模型</h3>
+				<p>一维水质模型的假设条件：
+某一水团沿水流运动方向移动，同时存在于该水团中的污染物亦随之移动，在运动过程中，污染物由于降解或转化成其它形式而发生浓度变化，这一变化往往与河流状态有关如：水温、溶解氧浓度等等，一维模型适用的假设条件是横向和垂直方向混合相当快，认为断面中的污染物浓度是均匀的。
+				</p>
+				<p>
+					(1) 稳态：在均匀河段上定常排污条件下，河段横截面、流速、流量、污染物的输入量和弥散系数都不随时间变化。</p>
+				<img src="images/water1.png" alt="formula" width="210" style="display: block;margin: 0 auto;">
+				<p>
+同时污染物按一级化学反应，不考虑源和汇，则有如下解：</p>
+				<img src="images/formula3.png" alt="formula" width="210" style="display: block;margin: 0 auto;">
+				<p>
+					K<sub>1</sub>——污染物降解的速率常数&nbsp;&nbsp;
+					D——纵向弥散系数&nbsp;&nbsp;
+					v——河水的流速
+				</p>
+				<p>
+					(2) 忽略弥散的一维稳态水质模型
+				</p>
+				<p>
+					适用河流较小，流速不大，弥散系数很小情况，微分方程为：
+				</p>
+				<img src="images/formula4.png" alt="formula" width="320" style="display: block;margin: 0 auto;">
+				<div class="cal clearfix" id="water1">
+					<div class="cal-left">
+						<label>初始浓度c<sub>0</sub>：
+							<input type="text" class="c0"><span> mg/L</span></label>
+							<label>河流流速v：
+							<input type="text" class="v"><span>m/s</span></label>
+						<label >污染物降解速率常数K<sub>1</sub>：
+						<input type="text" class="k1"><span>d<sup>-1</sup></span>
+						</label>
+						<label>距离x：
+								<input type="text" class="x"><span>m</span>
+						</label>
+						<label>纵向弥散系数D（选填）：
+								<input type="text" class="d"><span>m<sup>2</sup>/s</span>
+						</label>
+						
+					</div>
+					<div class="cal-middle">
+						<span class="button" id="cal-water1">计算 <i class="fa fa-arrow-right"></i></span>
+					</div>
+					<div class="cal-right">
+						<p>下游x（m）处浓度：<span class="c">____</span>mg/L</p>
+					</div>
+				</div>
+				<h3 id="a3">3. 湖库水质模型（完全混合箱式模型）</h3>
+				<p>(1) 保守物质：当流进湖泊的污水量与流出湖泊的湖水量不相等时，对于守恒物质（惰性物质），根据质量守恒定律，单位时间湖泊内污染物浓度C的变化可用下式表示：</p>
+				<img src="images/lake1.png" alt="formula" width="160" style="display: block;margin: 0 auto;">
+				<p>     式中: q—流入湖泊的污水量，m<sup>3</sup>/d：C<sub>i</sub>——入湖污水中污染物浓度（m<sup>3</sup>/L）；
+               q’—流出湖泊的湖水量加量m<sup>3</sup>／d；v——湖泊容积（m<sup>3</sup>）；</p>
+				<p>设上式初始条件为：t＝0时，C＝C0，将上式积分，得到t时刻的湖水中污染物的平均浓度 </p>	
+				<img src="images/lake2.png" alt="formula" width="260" style="display: block;margin: 0 auto;">
+				<p>式中：R—流进湖泊的水量与流出湖泊的水量的比值q/q`;T——污水在湖中滞留时间:T＝V／q。</p>
+				<p>非保守物质：当污染物为易分解有机物时，湖水中污染物浓度的变化，可用下列方程表示：</p>
+				<img src="images/lake3.png" alt="formula" width="160" style="display: block;margin: 0 auto;">
+				<p>式中  c——湖水污染后有机物的含量，m<sup>3</sup>／L；c0——起始时湖水有机物浓度，m<sup>3</sup>／L；
+     					 N——每日湖中有机物的输入总量，g／d；
+					      V——湖泊容积，m<sup>2</sup>；
+					      q——湖泊流出水量，m<sup>3</sup>／d；
+					      k'——有机物分解系数，1／d。</p>
+				<p>设上式初始条件为：t＝0时，C＝C0，将上式积分，得到t时刻的湖水中污染物的平均浓度：</p>
+				<img src="images/lake4.png" alt="formula" width="380" style="display: block;margin: 0 auto;">
+			</section>
+		</div>
+		</div>	
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block style %}
+	<link rel="stylesheet" href="{{ static_url("css/index.css") }}">
+{% end %}
+
+{% block content %}
+	
+	<div class="container  clearfix">
+		<div class="main fl clearfix ">
+			{% module Banner() %}
+
+			<section class="main clearfix">
+
+
+				<div class="feed-title">
+					<ul id="fixtop">
+						<li class="active">今日种草</li>
+						<li>精品团购</li>
+						<li>精选好物</li>
+					</ul>
+				</div>
+
+
+				<div class="feed-box clearfix">
+					<div class="img">
+						<a href=""><img src="dist/images/pic.jpg" alt=""><div class="desc">5件商品</div>
+						</a>
+					</div>
+					<div class="intro">
+						<h1><a href="">【专辑】本周路口人气爆棚的20件好物</a></h1>
+						<p class="plant">每周路口好物琅琊榜，收录一周以来收藏人气爆棚的好物，这些热门商品都是咱路友真心推荐，自己买过觉得好的，特别棒！</p>
+					</div>
+					<div class="user-info">
+						<div class="user">
+							<a href=""><img src="dist/images/pic.jpg" alt=""></a> <a href="">刃为^羽双串</a> 发布
+						</div>
+						<div class="star">
+							<i class="icon icon-collect"></i>
+							<span>55</span>
+						</div>
+					</div>
+				</div>
+				<div class="feed-box">
+					<div class="img">
+						<a href=""><img src="dist/images/pic.jpg" alt=""><div class="desc">5件商品</div>
+						</a>
+					</div>
+					<div class="intro">
+						<h1><a href="">已验货——GAP牛仔衬衫、GAP牛仔裤、地球音乐牛仔裤、 HM天丝裤子、柯淇打底裤、veromoda打底，运动鞋团</a></h1>
+						<p>团购价：<span class="unity-price">69.00</span>  &nbsp;&nbsp;&nbsp;&nbsp;原价：<span class="del-price">￥98.00</span></p>
+						<p>进行中：剩余 <span class="rest-time">9 </span>天</p>
+						<p>参团人数： 7 人</p>
+					</div>
+					<div class="user-info">
+						<div class="user">
+							<a href=""><img src="dist/images/pic.jpg" alt=""></a> <a href="">刃为^羽双串</a> 发布
+						</div>
+						<div class="star">
+							<i class="icon icon-collect"></i>
+							<span>55</span>
+						</div>
+					</div>
+				</div>
+				<div class="feed-box">
+					<div class="img">
+						<a href=""><img src="dist/images/pic.jpg" alt=""><div class="desc">5件商品</div>
+						</a>
+					</div>
+					<div class="intro">
+						<h1>
+						<a href="">撩妹有何难问男票借一件牛仔外套吧！韩国水洗长袖翻领宽 松显瘦牛仔外套女学生短外套潮厚牛仔上衣夹克</a></h1>
+						<p>现价：<span class="recent-price">69.00</span>  &nbsp;&nbsp;&nbsp;&nbsp;原价：<span class="del-price">￥98.00</span></p>
+						<p>撩妹到底有何难，要知道女人帅气来也能掰弯妹子！时下大热的BF风潮简直 挡也挡不住任何一个妹子都无法拒绝这样一件百搭万用的牛仔外</p>
+					</div>
+					<div class="user-info">
+						<div class="user">
+							<a href=""><img src="dist/asset/img/pic.jpg" alt=""></a> <a href="">刃为^羽双串</a> 发布
+						</div>
+						<div class="star">
+							<i class="icon icon-collect"></i>
+							<span>55</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<aside class="aside fl">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, nam fugiat provident explicabo hic! Minima vero non, nulla tenetur aperiam sint facere, nisi odio voluptatibus, sit illo ipsam alias exercitationem!
+		</aside>
+	</div>
+{% end %}

@@ -1,0 +1,127 @@
+<html>
+   <head>
+      <title> SlideVideo </title>
+      <style type="text/css">
+	  *{
+	    margin:0px;
+		padding:0px;
+	  }
+	   #box{
+	       width:960px;
+		   height:500px;
+		   font-family:幼圆;
+		   border:1px solid #000000;
+		   margin:30px auto;
+	   }
+	  
+		#v_caption, #showbox{
+		   width:900px;
+		   padding:10px;
+		   margin:30px auto;
+		   background-color:#FFDAB9;
+		   position:relative;
+		   overflow:hidden;
+		}
+		#v_caption{ height:100px; }
+	    #v_show{  width:2000px;height:270px; position:relative; }
+		ul{ list-style:none; }
+		li{
+		  
+		  float:left;
+		  margin:10px;
+		}
+		.fright{ float:right; }
+		.pic{
+		  width:206px;
+		  height:120px;
+		}
+		.current{
+		  color:red;
+		  font-size:x-large;
+		}
+			
+		a{ text-decoration:none; }
+	    a:link{ color:blue; }
+	    a:hover {color:yellow;}
+	    a:active {color:red;}
+	    a:visited {color:gray;}
+	  </style>
+	  <script type="text/javascript" src="jquery.js"></script>
+	  <script type="text/javascript" >
+	   $(function(){
+	      var page=1,i=1;
+		  var $vshow=$("#v_show");
+		  var len = $vshow.find("li").length;
+		  var page_cnt=Math.ceil(len/i);
+		  
+		 
+		  $("#next").click(function(){
+		  
+		  if(!$vshow.is(":animated")) 
+		  {
+			if(page == page_cnt)
+			{
+			  $("#v_show").animate({left:"0px"},3000);
+			  page=1;
+			}
+			  else {
+			    $("#v_show").animate({left:"-=229px"},"slow");
+			    page++;
+			  }
+		  	$(this).parent().siblings("#page").children().eq(page-1).addClass("current").siblings().removeClass("current");
+		   }
+		 });
+		 
+		  $("#prev").click(function(){
+		   if(!$vshow.is(":animated")) 
+		  {
+			if(page == 1)
+			{
+			  $("#v_show").animate({left:"-1368px"},3000);
+			  page=page_cnt;
+			}
+			  else {
+			    $("#v_show").animate({left:"+=229px"},"slow");
+			    page--;
+			  }
+		  	$(this).parent().siblings("#page").children().eq(page-1).addClass("current").siblings().removeClass("current");
+		  }
+		 });
+		 
+		 
+		  
+	   });
+
+	  </script>
+   </head>
+   <body>
+      <div id="box">
+	     <div id="v_caption">
+		   <ul>
+		      <li>秦时明月</li>
+		      <li id="page"><span class="current">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></li>
+			  <li><button type="button" id="prev">上一页</button></li>
+			  <li><button type="button" id="next">下一页</button></li>		
+              <li class="fright"><em><a href="#">More</a></em></li>			  
+		   </ul>
+		 </div>
+		 
+		 <div id="showbox">
+		   <div id="v_show">
+		     <ul>
+			    <li><a href="#">
+				    <img class="pic" src="1.jpg" alt="Qinsmoon"></a>  
+					<h4><a href="#">弄月</a></h4>  <span>点击:<em>2112</em></span> 
+				</li>
+			    <li><a href="#"><img class="pic" src="2.jpg" alt="Qinsmoon"></a>  <h4><a href="http://www.baidu.com">白凤</a></h4>  点击:<em>2132</em> </li>
+			    <li><a href="#"><img class="pic" src="3.jpg" alt="Qinsmoon"></a>  <h4><a href="#">少司命</a></h4>  点击:<em>2122</em> </li>
+			    <li><a href="#"><img class="pic" src="4.jpg" alt="Qinsmoon"></a>  <h4><a href="#">合集</a></h4>  点击:<em>2222</em> </li>
+			    <li><a href="#"><img class="pic" src="5.jpg" alt="Qinsmoon"></a>  <h4><a href="#">合集</a></h4>  点击:<em>2222</em> </li>
+			    <li><a href="#"><img class="pic" src="6.jpg" alt="Qinsmoon"></a>  <h4><a href="#">合集</a></h4>  点击:<em>2222</em> </li>
+			    <li><a href="#"><img class="pic" src="7.jpg" alt="Qinsmoon"></a>  <h4><a href="#">合集</a></h4>  点击:<em>2222</em> </li>
+			  </ul>
+		   </div>
+		 </div>
+	  </div>
+   </body>
+</html>

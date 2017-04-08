@@ -1,0 +1,41 @@
+.icons-sprite, .icons-card, .icons-card1, .icons-cart, .icons-home, .icons-home1, .icons-list, .icons-list1, .icons-service, .icons-staff, .icons-staff1, .icons-x { background-image: url('../images/icons-s1cbcfa3615.png'); background-repeat: no-repeat; }
+
+.icons-card { background-position: 0 0; height: 18px; width: 17px; }
+
+.icons-card1 { background-position: 0 -18px; height: 18px; width: 17px; }
+
+.icons-cart { background-position: 0 -36px; height: 24px; width: 26px; }
+
+.icons-home { background-position: 0 -60px; height: 18px; width: 17px; }
+
+.icons-home1 { background-position: 0 -78px; height: 18px; width: 17px; }
+
+.icons-list { background-position: 0 -96px; height: 18px; width: 19px; }
+
+.icons-list1 { background-position: 0 -114px; height: 18px; width: 19px; }
+
+.icons-service { background-position: 0 -132px; height: 24px; width: 25px; }
+
+.icons-staff { background-position: 0 -156px; height: 18px; width: 18px; }
+
+.icons-staff1 { background-position: 0 -174px; height: 18px; width: 18px; }
+
+.icons-x { background-position: 0 -192px; height: 19px; width: 19px; }
+
+.images-sprite, .images-li1, .images-li2, .images-li3, .images-li4, .images-li5, .images-li6 { background-image: url('../images/images-s15b5bddf23.png'); background-repeat: no-repeat; }
+
+.images-li1 { background-position: 0 0; height: 39px; width: 39px; }
+
+.images-li2 { background-position: 0 -39px; height: 39px; width: 39px; }
+
+.images-li3 { background-position: 0 -78px; height: 50px; width: 33px; }
+
+.images-li4 { background-position: 0 -128px; height: 42px; width: 43px; }
+
+.images-li5 { background-position: 0 -170px; height: 39px; width: 53px; }
+
+.images-li6 { background-position: 0 -209px; height: 39px; width: 39px; }
+
+/* $icons: sprite-map("images/*.png", $spacing: 8px, $layout: horizontal);
+.li1-icon { background-image: sprite-url($icons); width: image-width(sprite-file($icons, li1)); height: image-height(sprite-file($icons, li1)); background-position: sprite-position($icons, li1); background-repeat: no-repeat;
+}  */

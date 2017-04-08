@@ -1,0 +1,40 @@
+@import "_icon.scss";
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	background-color: $bgcolor;
+	font-size: $font-size-base;
+	font-weight: normal;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix:after {
+    content:".";
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+.container {
+	width: $width;
+	margin: 0 auto;
+}
+.main {
+	width: $main-width;
+	margin-right: $main-margin-right;
+}
+.aside {
+	width: $aside-width;
+}

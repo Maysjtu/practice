@@ -1,0 +1,30 @@
+footer {	
+	margin: 0;
+	width: 100%;
+	height: $footer-height;
+	background-color: #323232;
+	
+	overflow: hidden;
+	.footer-sec {
+		width: $width;
+		margin: 0 auto;
+		height: $footer-height;
+		background: url("../img/logo-footer.png") 0 35px no-repeat;		
+	}
+	ul {
+		float: right;
+		li {
+			float: right;
+			a {
+				font-size: $font-size-base - 2;
+				padding: 0 12px;
+				height: $footer-height;
+				line-height: $footer-height;
+				color: #aaa;
+				&:hover {
+					color: #fff;
+				}
+			}			
+		}
+	}
+}

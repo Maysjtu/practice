@@ -1,0 +1,9 @@
+.icon {
+	display: inline-block;
+	width: $icon-width;
+	height: $icon-width;
+	background-size: $icon-width $icon-width; 
+}
+.icon-collect {
+	background: url("../img/icon_collect.png") no-repeat;
+}

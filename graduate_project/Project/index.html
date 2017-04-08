@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>案例分析</title>
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="Keywords" content="水质模型、计算系统、案例分析">
+	<meta name="description" content="一个基于Web的污染物水质模型计算系统，包括零维水质模型、一维水质模型和湖库水质模型的分析和计算，以及具体案例分析。">
+</head>
+<body>
+	<header>
+		<h1>
+        污染物环境毒理效应计算系统
+		</h1>
+	</header>
+	<div id="container">
+		<nav id="nav">
+			<ul class="navli">
+				<li class="active"><i class="fa fa-globe" aria-hidden="true"></i>案例分析</li>
+				<li><a href="model.html"><i class="fa fa-bar-chart"></i>模型分析</a></li>
+				<li><a href="table.html"><i class="fa fa-file-text"></i> 附&nbsp;&nbsp;&nbsp;表&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+				<li><a href="link.html"><i class="fa fa-star"></i>友情链接</a></li>
+			</ul>
+		</nav>
+			<div class="main-right clearfix">	
+		<div class="display">
+			<section class="part" id="part1">
+				<h2>案例分析</h2>
+				<p>某冶金工厂的电镀废水排入附近的河流中，废水流量为2m<sup>3</sup>／s，其中含有铜离子的浓度为3700mg/L．研究的河段水流恒定，河流的平均流速0.5m／s，平均河宽50m，平均水深2.5m，河水源头中铜离子的浓度为0.05mg/L，河水流入一个湖泊，湖泊的出水量为500m<sup>3</sup>/s, 湖泊体积为30(km)<sup>3</sup> 。若下游的居民以此湖水为饮水源，按照地表水III标准，饮水摄入铜离子<1.0mg/L,可以否？（1天后、1月后和长期后） 
+				</p>
+				<div class="model" id="model">
+					<form action="#">
+						<div class="waste-water">
+							<label>污水流量Q<sub>2</sub> : <input type="text" class="q2" value="2"><span>m<sup>3</sup>/s</span>
+							</label>
+							<label>污水浓度C<sub>2</sub>：
+							<input type="text" class="c2" value="3700"><span>mg/L</span>
+							</label>
+						</div>
+						<div class="river">
+							<label>河水流量Q<sub>1</sub>：
+							<input type="text" class="q1" value="62.5"><span>m<sup>3</sup>/s</span></label>
+							<label>河水浓度C<sub>1</sub>：
+							<input type="text" class="c1" value="0.05"><span>mg/L</span></label>
+						</div>
+						<div class="lake">
+							<label>湖泊出水量q`：
+							<input type="text" class="q" value="500"><span>m<sup>3</sup>/s</span></label>
+							<label>湖泊体积 V：
+							<input type="text" class="v" value="30"><span>(km)<sup>3</sup></span></label>
+						</div>
+						<img src="images/water.jpg" alt="">
+						<div class="buttonbox">
+							<span class="button" id="cal-model">计算</span>
+							<input class="button" type="reset" value="重置">
+						</div>
+					</form>
+				</div>
+				<div class="cal" id="for-model">
+						混合后河水的浓度：C<sub>3</sub> = (Q<sub>1</sub>*C<sub>1</sub>+Q<sub>2</sub>*C<sub>2</sub>)/(Q<sub>1</sub>+Q<sub>2</sub>) = <span class="c3">____</span> mg/L <br>
+						湖水停留时间：T = V/q' = <span class="t">____</span> d <br>
+						湖泊进出水量比值：R = q/q' = <span class="r">____</span> <br>
+						1天湖水中的铜离子浓度：C = RC - (RC - C<sub>0</sub>)e<sup>-t/T</sup> = <span class="c-day">____</span> mg/L <br>
+						1月湖水中的铜离子浓度：C = RC - (RC - C<sub>0</sub>)e<sup>-t/T</sup> = <span class="c-month">____</span> mg/L <br>
+						长期：C = RC = <span class="c">____</span> mg/L
+						
+				</div>
+			</section>
+		</div>
+		</div>	
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

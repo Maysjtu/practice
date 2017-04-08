@@ -1,0 +1,194 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	/*background-color: #bbefd9;*/
+	background-color: #002940;
+	font-family: "Microsoft YaHei";
+	color: #01bcc2;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	visibility: none;
+	clear: both;
+	height: 0;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+header {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #effbf9;
+	border-bottom: 3px solid #01bcc2;
+	float: left;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 1.5em;
+	font-weight: 600;
+	letter-spacing: 2px;
+	padding-left: 100px;
+	background: url(../images/logo1.png) 45px 10px no-repeat;
+	background-size:40px 40px;
+}
+#container {
+	width: 100%;
+	height: 100%;
+}
+nav {
+	float: left;
+	width: 18%;
+	min-width: 120px;
+	height: 100%;
+	background-color: #002940;
+}
+nav i {
+	padding: 0 10px;
+}
+nav ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.navli li {
+	list-style: none;
+	font-size: 1.1em;
+	color: #fff;
+	width: 100%;
+	line-height: 50px;
+	background-color: #002940;
+	text-align: center;
+	transition: all 0.1s;
+}
+.navli li a {
+	display: block;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+}
+.navli>li:hover {
+	cursor: pointer;
+	background-color: #01bcc2;
+}
+.navli li.active {
+	background-color: #01bcc2;
+}
+.second-ul {
+	display: none;
+}
+.main-right {
+	width: 82%;
+	margin-left: 18%;
+	background-color: #bbefd9;
+
+}
+.display {
+	float: left;
+	width: 100%;
+	min-width: 800px;
+	overflow: hidden;
+}
+.part {
+	color: #000;
+	background-color: #edf6f3;
+	padding: 15px 30px;
+	border-radius: 8px;
+	margin:20px 20px 50px;
+}
+.part p {
+	text-indent: 2em;
+}
+.part input[type="text"]{
+	margin:5px;
+	height: 15px;
+	width: 60px;
+}
+.part ol {
+	list-style: none;
+	background-color: rgba(24,150,90,0.2);
+	padding: 10px 30px 10px 40px;
+	border-radius: 5px;
+}
+.cal {
+	background-color: rgba(24,150,90,0.2);
+	padding: 10px 30px 10px 40px;
+	border-radius: 5px;
+}
+.cal-left {
+	width: 300px;
+	float: left;
+}
+.cal-middle {
+	width: 120px;
+	float: left;
+}
+.cal-right {
+	width: 40%;
+	float: left;
+}
+
+.part ol a {
+	
+	color: #2980b9;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
+.part label {
+	display: block;
+
+}
+
+#part1 .model {
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+#part1 .model img {
+	width: 600px;
+}
+.waste-water {
+	position: absolute;
+	left: 300px;
+	top: 50px;
+}
+.river {
+	position: absolute;
+	left: -50px;
+	top: 180px;
+}
+.lake {
+	position: absolute;
+	left: 350px;
+	top: 220px;
+}
+.buttonbox {
+	width: 250px;
+	margin: 0 auto;
+}
+.button {
+	outline: none;
+	border: none;
+	display: inline-block;
+	background-color: rgba(24,150,90,0.6);
+	padding: 4px 15px;
+	border-radius: 5px;
+	margin: 10px 20px;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: rgba(24,150,90,0.9);
+}
+#link a {
+	color: #000;
+}
+#link a:hover {
+	text-decoration: underline;
+}

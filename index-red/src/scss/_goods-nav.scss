@@ -1,0 +1,42 @@
+$goods-nav-bgcolor: saturate(lighten($themecolor,15%),30%);
+$goods-nav-height: 56px;
+
+.goods-nav {
+	margin-bottom: 15px;
+	font-size: $font-size-base + 2;
+	.title {
+		float: left;
+		letter-spacing: 1px;
+		text-align: center;
+		width: 200px;
+		height: $goods-nav-height;
+		line-height: $goods-nav-height;
+		color: #fff;
+		background-color: $goods-nav-bgcolor;
+		position: relative;
+	}
+	.title:after {
+		@include bulge(0,15px,15px,$goods-nav-bgcolor,95%,40%,45deg);
+	}
+	ul {
+		float: left;
+		li {
+			float: left;
+			height: $goods-nav-height;
+			width: 150px;
+			text-align: center;
+			background-color: #FFF;
+		}
+		a {
+			display: inline-block;
+			height: $goods-nav-height - 2;
+			margin: 0 auto;
+			line-height: $goods-nav-height - 2;
+			color: #000;
+			&:hover {
+				color: $goods-nav-bgcolor;
+				border-bottom: 2px solid $goods-nav-bgcolor;
+			}
+		}
+	}
+}

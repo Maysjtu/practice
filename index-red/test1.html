@@ -1,0 +1,43 @@
+    <html>
+     <head> 
+      <style type="text/css">
+    html, body, #wrap {height: 100%;}
+    body > #wrap {height: auto; min-height: 100%;}
+    #main {padding-bottom: 50px;}  /* 必须使用和footer相同的高度 */
+    #footer {
+    position: relative;
+     margin-top: -50px; /* footer高度的负值 */
+     height:50px;
+     clear:both;
+     background:red;
+     }
+     .clearfix:after {
+     content: ".";
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+     }
+    .clearfix {display: inline-block;}
+    * html .clearfix { height: 1%;}
+    .clearfix {display: block;}
+     
+      </style>
+     </head>
+     <body>
+    	<div id="wrap">
+    		 <!--对#main部份进行著名的Clearfix Hack-->
+    		 <div id="main" class="clearfix">
+    			  <div id="content" style="min-height:600px;height:auto">
+    				  <li>这是内容www.phpddt.com</li>
+    				  <li>这是内容www.phpddt.com</li>
+    				  说明：#main的padding值、footer的高度和负margin值一致
+    			  </div>
+    			  <div id="side">
+    			  </div>
+    		</div>
+    	</div>
+    	<div id="footer">
+        </div>
+     </body>
+    </html>

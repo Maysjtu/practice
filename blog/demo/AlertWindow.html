@@ -1,0 +1,86 @@
+<html><!---->
+   <head>
+      <title>Window</title>
+	  <style>
+	     
+	     th{
+		     font-family:楷体;
+		     font-size:24px;
+             color:#FFDAB9;			 
+		   }
+		 td{
+
+		     font-family:宋体;
+		     font-size:18px;
+
+		   }
+		 .c1{color:#B3EE3A;}
+		 .c2{color:#FFDA3A;}
+		 .c3{color:#F3003A;}
+		 .c4{text-indent:2em;}<!--首行缩进-->
+	  </style>
+      <script type="text/javascript">
+	  <!--
+	   function _openWin()//设置打开窗口的属性
+	   {
+	       var _url = "AlertWindow.html";
+		   var _name = "_blank";
+		   var _feature = "";//特征描述实在是太多啦!
+		   var _left = (window.screen.width - 400)/2;//新窗口居中时距屏幕左边的距离
+		   var _top = (window.screen.Height - 300)/2;
+		   _feature += "left="+_left+",";
+		   _feature += "top="+_top+",";
+		   _feature += "width=500,";
+		   _feature += "height=400,";
+		   _feature += "resizable=0,";//大小不可更改 然而我在谷歌里面还是可以改
+		   _feature += "scrollbars=0,";//然而它还是显示了!!!
+		   _feature += "menubar=1,status=0,location=0,directories=0";
+		   var win = window.open(_url,_name,_feature);
+	   }
+	  -->
+	  </script>
+   </head>
+   <body>
+      <form name="form0" method="post" action="#">
+	     <table width="600px" align="center" border="1" cellspacing="0">
+	        <thead>
+			   <th colspan="3">
+			      <span class="c1">少</span>
+				  <span class="c2">司</span>
+				  <span class="c3">命</span>
+			   </th>
+			<thead>
+			<tr>
+			   <td valign="top" width="200px" >
+			      <ul>
+				    <li><a href="#" onmouseover="return showMsg('主页')">主页</a></li>
+				    <li><a href="#" onmouseover="return showMsg('简介')">简介</a></li>
+				    <li><a href="#" onmouseover="return showMsg('文字信息')">文字信息</a></li>
+				    <li><a href="#" onmouseover="return showMsg('图片信息')">图片信息</a></li>
+				  </ul>
+			   </td>
+			   <td valign="top" width="300px" colspan="2" class="c4">
+			       
+				       阴阳家五大长老之一（与云中君、大司命、湘君、湘夫人并列），掌管五行派系中的木部。
+				   令人闻风丧胆的死亡使者之一，性情冷漠，有着与年龄不相符的高深武功。
+				   总是以面纱遮面，传说她美若天仙，但这世上还没有人见过她面纱之下的真正面目。
+			   </td>
+			</tr>
+		    <tr align="center">
+			   <td colspan="3">
+			      <input type="button" value="打开新窗口" onclick="_openWin()">
+			   </td>
+			</tr>
+			<tr>
+			   <td colspan="3" padding="10px">
+			      <img src="girl.jpg" width="600px" height="350px">
+			   </td>
+			</tr>
+		 </table>
+	  </form>
+   
+   
+   
+   </body>
+
+</html>

@@ -1,0 +1,90 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "normalize";
+@import "compass";
+@import "base";
+//.sm-slider{ position:absolute; top:10px; left:227px; width:755px; height:348px; overflow:hidden;}
+
+%center {
+	width: 1200px;
+	margin: 0 auto; 
+}
+header {
+	@extend %center;
+	height: 100px;
+	//background-color: #ccc;
+	%box {
+		height: 80px;
+		padding: 10px;
+	}
+	.logo {
+		display: block;
+		width: 360px;
+		@extend %box;
+		background: 10px 15px url("../images/logo2_03.png") no-repeat;
+	}
+	a {
+		display: block;
+		width: 350px;
+		float: left;
+	}
+	.contact {
+		display: block;
+		width: 450px;
+		@extend %box;
+		background: 10px 20px url("../images/tel.png") no-repeat,
+					235px 20px url("../images/email.png") no-repeat;
+		float: right;
+	}
+}
+section {
+	width: 100%;
+}
+.carousel {
+	height: 325px;
+	background-color: #ccc;
+	position: relative;
+	.sm-slider .sm-s-wrap .item{ 
+		width:100%; 
+		height:325px;
+		position:absolute; 
+		top:0; 
+		left:0;
+		z-index:0; 
+		overflow:hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.sm-slider .sm-s-trigger {
+		position:absolute;
+	    z-index:4;
+	    left: 42%;
+	    bottom:16px;
+	}
+	.sm-slider .sm-s-trigger a{ 
+		cursor:pointer; 
+		display:inline-block; 
+		width:70px; 
+		height:5px;
+		margin-right: 5px;
+		background-color: #616161;
+	}
+	.sm-slider .sm-s-trigger a.curr { 
+		background-color: #fff;
+	}
+}
+.part {
+	width: 100%;
+	img {
+		width: 100%;
+		
+	}
+}
+.pad {
+	padding:35px 0;
+}

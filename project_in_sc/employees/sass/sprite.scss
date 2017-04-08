@@ -1,0 +1,17 @@
+@import "compass";
+@import "icons/*.png";
+$icons-sprite-dimensions: true;
+@include all-icons-sprites();
+
+@import "images/*.png";
+$images-sprite-dimensions: true;
+@include all-images-sprites();
+
+/* $icons: sprite-map("images/*.png", $spacing: 8px, $layout: horizontal);
+.li1-icon {
+    background-image: sprite-url($icons);
+    width: image-width(sprite-file($icons, li1));
+    height: image-height(sprite-file($icons, li1));
+    background-position: sprite-position($icons, li1);
+    background-repeat: no-repeat;
+}  */

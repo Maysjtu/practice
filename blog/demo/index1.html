@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Canvas1 </title>
+	<style>
+	   *{
+	   	margin:0;
+	   	padding: 0;
+	   }
+       body{
+       	width: 100%;
+       	height: 100%;
+       }
+	</style>
+    <script type="text/javascript" src="digit.js"></script>
+</head>
+<body >
+	<canvas id="canvas" style="height:100%" >	</canvas>
+	
+	<script>	
+	  var canvas=document.getElementById('canvas');
+	  var context = canvas.getContext('2d');
+      canvas.width=document.body.clientWidth;
+      canvas.height=document.documentElement.clientHeight;
+     // canvas.height=canvas.width*0.3;
+     // alert(document.documentElement.clientHeight);
+   
+	  function ball(xx,yy,vx,vy,g,co){
+        this.xx=xx;
+        this.yy=yy;
+        this.vx=vx;
+        this.vy=vy;
+        this.g=g;
+        this.co=co;
+	  }
+	  var ballarr=new Array(),cnt=-1,ballcolor=new Array("#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000");
+
+	  var RADIUS=canvas.width/150,MAXBALL=700;
+	  var MY_OFFSET=15*RADIUS,OX=16*RADIUS,OY=5*RADIUS,VX=RADIUS/2,VY=-RADIUS,VYG=RADIUS/4;
+	  var sth1=0,sth2=0,stm1=0,stm2=0,sts1=0,sts2=0;
+
+      var clear1=setInterval(changeDate,50);
+    
+      
+      function _clear()
+      {   clearInterval(clear1);}
+      
+       
+	  function changeDate(){
+	  	 context.clearRect(0,0,canvas.width,canvas.height);
+		      var mydate=new Date();
+		      var h=23-mydate.getHours(),myminute=59-mydate.getMinutes(),mysecond=59-mydate.getSeconds();
+		      var h1=Math.floor(h/10),h2=Math.floor(h%10),m1=Math.floor(myminute/10),m2=Math.floor(myminute%10),
+		          s1=Math.floor(mysecond/10),s2=Math.floor(mysecond%10);
+		      
+             drawball(h1,OX,OY);
+		      if(h1!=sth1){
+		      	sth1=h1;
+		      }
+		      drawball(h2,OX+MY_OFFSET,OY);
+		      drawball(10,OX+MY_OFFSET*2,OY);
+		      if(h2!=sth2){
+		      	sth2=h2; 
+		      }
+		     drawball(m1,OX+MY_OFFSET*2.6,OY);
+		      if(m1!=stm1){
+		       addball(stm1,OX+MY_OFFSET*2.6,OY);stm1=m1;
+		      }
+		      drawball(m2,OX+MY_OFFSET*3.6,OY);
+		      drawball(10,OX+MY_OFFSET*4.6,OY);
+		      if(m2!=stm2){
+		       addball(stm2,OX+MY_OFFSET*3.6,OY); stm2=m2; 
+		      }
+		     drawball(s1,OX+MY_OFFSET*5.2,OY);
+		      if(s1!=sts1){
+		      addball(sts1,OX+MY_OFFSET*5.2,OY);sts1=s1; 
+		      }
+		      drawball(sts2,OX+MY_OFFSET*6.2,OY);
+		      if(s2!=sts2){
+		       addball(sts2,OX+MY_OFFSET*6.2,OY);sts2=s2; 
+		      }
+              
+              ballfall();
+
+
+
+      }
+  
+      function drawball (x,_offsetx,_offsety) {
+      	
+      	//alert(_offsetx+(digit[x][0].length+1)*2*RADIUS+"    ***    "+_offsety+(digit[x].length+1)*2*RADIUS);
+      	for (var i = 0; i < digit[x].length; i++) {
+      	  for (var j=0; j< digit[x][i].length;j++)
+      	  {
+              if(digit[x][i][j]==1)
+              {
+                context.beginPath();
+                context.arc(_offsetx+(j+1)*2*RADIUS,_offsety+(i+1)*2*RADIUS,RADIUS-1,0,2*Math.PI);
+              
+				context.fillStyle='lightblue';
+				
+				context.fill();
+              }
+
+      	  }
+      	}
+      }
+
+
+    function addball(x,_offsetx,_offsety){
+         for (var i = 0; i < digit[x].length; i++) {
+      	  for (var j=0; j< digit[x][i].length;j++) {
+              if(digit[x][i][j]==1) {
+               cnt++;
+               cnt1=cnt%MAXBALL;
+               var _random=Math.floor(Math.random()*ballcolor.length);
+               var co=ballcolor[_random];
+               var g=VYG+Math.random();
+               var vx=(VX+Math.random())*Math.pow(-1,Math.floor(Math.random()*100));
+               ballarr[cnt1]=new ball(_offsetx+(j+1)*2*RADIUS,_offsety+(i+1)*2*RADIUS,vx,VY,g,co); 
+               //alert(cnt+" xx:"+_random+' yy:'+ballarr[cnt].co);
+              }
+
+      	  }
+      	}
+
+      }
+
+      function ballfall () {
+      	
+         
+         for (var i = 0; i < MAXBALL; i++) {
+	        // 	 alert(i+" xx:"+ballarr[i].xx+' yy:'+ballarr[i].vx);
+	        if(!ballarr[i])break;
+	         ballarr[i].xx+=ballarr[i].vx;
+	          ballarr[i].vy+=ballarr[i].g;
+	          ballarr[i].yy+=ballarr[i].vy;
+	          if(ballarr[i].yy>canvas.height-RADIUS-20){
+	         	ballarr[i].yy=canvas.height-RADIUS-20;
+	         	ballarr[i].vy*=-0.6;
+	         	//ballarr[i].vx*=0.99;
+	         	
+	          }
+	         context.beginPath();
+	         context.arc(ballarr[i].xx,ballarr[i].yy,RADIUS,0,2*Math.PI);
+	        
+	         context.fillStyle=ballarr[i].co;
+	       
+	         context.fill();
+         }
+        
+      }
+	</script>
+
+</body>
+</html>

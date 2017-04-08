@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>caculator</title>  
+	<style type="text/css">
+	    
+	    #div1{
+		   width:500px;
+		   height:300px;
+		   background-color:#FFDAB9;
+		   font-size:250%;
+		   overflow:hidden;<!--1.使用margin=0,padding=0 2.设置了height的样式中加入overflow:hidden去掉其间的空隙 -->
+		}
+		#div2{
+		   width:500px;
+		   height:370px;
+		   background-color:#FFDAB9;
+	       font-size:150%;
+		   overflow:hidden;
+		  	}
+		.operator{
+		   width:50px;
+		   height:35px;
+		   font-size:90%;
+		   margin:5px;
+		   padding:5px;
+		}
+	</style>
+	<script language="javascript">
+	<!--                              //即使浏览器不支持也不会输出这些代码了。
+	function MousePlace()
+	{
+	   var x=event.x;
+	   var y=event.y;
+	   window.status="X: "+x+"Y: "+y;
+	}
+    document.onmousemove=MousePlace;//显示鼠标位置，只有在IE里面有。360和谷歌都没有
+	
+	
+	function Caculate(op)           
+	  {
+	    var a=parseFloat(document.all.Num1.value);//还是要转化成数字啊 use parseFloat
+		var b=parseFloat(document.all.Num2.value);
+		switch(op)
+		{
+		   case '+': sum=a+b; break;
+		   case '-': sum=a-b; break;
+		   case 'x': sum=a*b; break;
+		   default : sum=a/b;
+		}
+		document.all._Result.value=sum;
+	  }
+	  function Changecolor1(n)//什么 传递的直接是一个object？哦 因为我直接写的a1 没有加引号
+	                         //竟然可以直接传递对象
+	  {
+	    // alert(n);
+	     n.style.background="lightblue";//改变文本域的颜色！！
+	     //var e=window.event;
+         //var obj=e.srcElement;
+         //obj.style.background="lightblue";//lightblue要加引号啊！！蠢哭了 
+	  }
+	   function Changecolor2(n)
+	  {
+	     n.style.background="white";
+	  }
+	  function _closeWindow()
+	  {
+	     window.close();
+		 return;
+	  }  
+	-->
+	</script>
+  </head>
+  <body>
+    <center>
+       <div id="div1">
+	     <img src="sakura.gif" width="500px" height="170">
+		 <p>Warmly Welcome!</p>      <!-- 这里把右边的尖括号去掉 在Chrome里面竟然可以无缝连接= = -->
+	   </div>
+	   <div id="div2" >
+	      <p> A Simple Calculator  </p>
+		  <form>
+		  <br/>
+		  First number :<input type="text" id="a1" name="Num1"  onfocus="Changecolor1(a1)" onblur="Changecolor2(a1)"/><!--onselect是选中的时候 这里应该用 onfocus -->
+		  <br/>
+		  Second number:<input type="text" id="a2" name="Num2"  onfocus="Changecolor1(a2)" onblur="Changecolor2(a2)"/>
+          <br/>
+		  <table>
+		    <tr> 
+			  <td> <input type="button" class="operator" value="+" onclick="Caculate('+')">  </td><!-- 函数里面是字符？ -->
+			  <td> <input type="button" class="operator" value="-" onclick="Caculate('-')">  </td>
+			  <td> <input type="button" class="operator" value="x" onclick="Caculate('x')">  </td>
+			  <td> <input type="button" class="operator" value="/" onclick="Caculate('/')">  </td>
+            </tr>	
+		  </table>
+		  Result:<input type="text" name="_Result" >
+          </form>
+		  <br/>
+		  <font size="2"><!--font 字体标记包括 字体face 大小size 颜色color -->
+		     <a href="javascript:_closeWindow();">&copy Close the calculator!</a><!-- 调用JavaScript函数-->
+		  </font>
+		</div>
+	</center>
+  </body>
+</html>

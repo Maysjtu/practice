@@ -1,0 +1,261 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass";
+@import "base";
+#categorys-2015 .dd {
+	display:none;
+}
+$themecolor:#4e67a5;
+$fontcolor: #828282;
+$goldyellow: #e9ca78;
+body {
+	color: $fontcolor;
+}
+
+@import "sprite1";
+
+.cw-icon i.icons-cart {
+	width: 24px;
+	height: 24px;
+}
+.hotline{
+		color:#95a4c9;
+		font-size: 20px;
+		font-family: "Microsoft YaHei";
+		font-weight: bold;
+		float: right;
+		span {
+			color:#dab06d;
+		}
+}
+section {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.part1 {
+	height: 350px;
+	a {
+		color: $fontcolor;
+		&:hover {
+			color:lighten($themecolor, 0.3);
+		}
+	}
+	.carousel {
+		width: 990px;
+		height: 340px;
+		position: relative;
+
+		.sm-slider .sm-s-wrap .item{ 
+		width:100%; 
+		position:absolute; 
+		top:0; 
+		left:0;
+		z-index:0; 
+		overflow:hidden;
+		img {
+			width: 100%;
+			height: 340px;
+		}
+	}
+	.sm-slider .sm-s-trigger {
+		position:absolute;
+	    z-index:4;
+	    left: 48%;
+	    bottom:16px;
+	}
+	.sm-slider .sm-s-trigger a{ 
+		cursor:pointer; 
+		display:inline-block; 
+		width:14px; 
+		height:14px;
+		margin-right: 10px;
+		@include border-radius(8px);
+		background-color: #616161;
+	}
+	.sm-slider .sm-s-trigger a.curr { 
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	}
+	.rightpart {
+		width: 198px;
+		border: 1px solid lighten($themecolor,20%);
+		hgroup {
+			background-color: $themecolor;
+			padding:5px 10px;
+			color: #fff;
+			span {
+				a {
+					color: $goldyellow;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.content {
+			padding:10px;	
+		}
+		.notice {
+			ul {
+				padding-left:15px;
+				li {
+					list-style: disc;
+					height: 18px;
+					line-height: 18px;
+				}
+				li:nth-child(odd) {
+					padding-right: 10px;
+				}
+				
+			}
+		}
+		.special {
+			position: relative;
+			height: 203px;
+			ul {
+				width: 100%;
+				height: 180px;
+				&#list2 {
+					display: none;
+				}
+				margin-top:-10px;
+				padding: 5px;
+				li {
+					float: left;
+					padding: 5px;
+					text-align: center;
+					.li-icons {
+						width: 60px;
+						height: 45px;
+					}
+					i {
+						display:block;
+						margin: 0 auto;
+					}
+					span {
+						display: block;
+						height: 25px;
+						line-height: 25px;
+					}
+				}
+				li:nth-child(odd){
+					margin:0 10px;
+				}
+
+			}
+			.page {
+				height: 15px;
+				padding-left: 10px;
+				span {
+					display: inline-block;
+					width: 5px;
+					height: 5px;
+					background-color: #ccc;
+					@include border-radius(5px);
+
+				}
+				.active {
+						background-color:#bf1e2e;
+					}
+				position: absolute;
+				left: 80px;
+				bottom: 5px;
+			}
+		}
+	}
+	
+}
+.floor .mt {
+	h2 {
+		color: $themecolor;
+		font-weight: 600;
+	}
+}
+.recommend {
+	margin-top: -15px;
+	.mt {
+		background: 0px 20px url("../images/recommend.png") no-repeat;
+	}
+	h2 {
+		padding-left: 7px;
+	}
+	.rc-show-box {
+		width: 1200px;
+		height: 330px;
+		.rc-show {
+			width: 240px;
+			@include transition(width 0.3s ease-in 0.08s);
+			height: 330px;
+			float: left;
+			overflow: hidden;
+			&:nth-child(odd) {
+				background-color: #4e67a5;
+			}
+			&:nth-child(even) {
+				background-color: #c1d0f7;
+			}
+			background: 45% 9% url("../images/title.png") no-repeat;
+			.rc-content {
+				margin-top: 95px;
+				img {
+					display: block;
+					float: left;
+					width: 240px;
+					height: 235px;
+				}
+				.detail-text {
+					float: left;
+					width: 240px;
+					height: 235px;
+					background-color: #e3e3e3;
+					.text {
+						color: $themecolor;
+						font-size: 12px;
+						line-height: 26px;
+						letter-spacing: 2px;
+						padding: 30px;
+					}
+					.button {
+						text-align: center;
+						color: #fff;
+						font: {
+							family: "Microsoft YaHei";
+							size: 16px;
+							weight: 500;
+						}
+						height: 30px;
+						line-height: 30px;
+						width: 120px;
+						margin: 20px;
+						margin-left: 80px;
+						background-color: $themecolor;
+						@include border-radius(8px);
+						a {
+							@include unstyled-link;
+						}
+						cursor: pointer;
+						&:hover {
+							background-color: lighten($themecolor, 8%);
+						}
+					}
+				}
+			}
+
+		}
+		.rc-active {
+			width: 480px;
+			@include transition(width 0.3s ease-in 0.08s);
+        }
+	}
+}
+.ad {
+	height: 160px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}

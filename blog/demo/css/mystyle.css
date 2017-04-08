@@ -1,0 +1,149 @@
+html{
+	width:100%;
+	height:100%;
+	-webkit-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	-o-text-size-adjust:none;
+}
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	background-color:#47C9AF;
+	font-weight:500;
+	font-size:1.5em;
+	font-family:'Raleway', Arial, sans-serif;
+	color:rgba(0,0,0,0.4);
+}
+*, *:after, *:before{
+	-webkit-box-sizing: border-box;/*确保盒子模型的长宽不变*/
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box; }
+
+.clearfix:before,.clearfix:after{ content: ''; display:block;}
+.clearfix:after { clear: both; }
+
+.container{
+	width:840px;
+	height:300px;
+	margin:200px auto 0 auto;
+	font-weight:700;
+}
+
+a{
+	text-decoration:none;
+	outline:none;
+	color:rgba(0,0,0,0.3);   /*给a重新设置初值*/
+	position:relative;
+	z-index:9;
+}
+a:hover,a:focus{color:#FFF;}
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+ul li{
+	display:inline-block;
+	margin:20px;	
+}
+.tooltip-content{
+	display:block;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background-color:#FFF;
+	padding-top:25px;
+	margin-left:-40px;
+	margin-bottom:20px;  
+	text-align:center;
+	color:#47C9AF;
+	position:absolute;
+	z-index:99;
+	left:50%;
+	bottom:100%;
+	opacity:0;
+}
+.tooltip-content:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:50%;
+	width:30px;
+	height:20px;
+    margin-left:-15px;
+    margin-top:-7px;
+	background:url(../img/tooltip1.svg) no-repeat center center;
+}
+.tooltip-effect1{
+	-webkit-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-moz-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-ms-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	
+}
+.tooltip-effect1 i{
+	-webkit-transform:scale3d(0,0,1);
+	-moz-transform:scale3d(0,0,1);
+	transform:scale3d(0,0,1);
+}
+
+.tooltip-effect2{
+	-webkit-transform: translate3d(0,10px,0);
+	-moz-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+.tooltip-effect2 i{
+	-webkit-transform:translate3d(0,15px,0);
+	-moz-transform:translate3d(0,15px,0);
+	transform:translate3d(0,15px,0);
+}
+
+.tooltip-effect3{
+	-webkit-transform: rotate3d(0,1,0,90deg);
+	-moz-transform: rotate3d(0,1,0,90deg);
+	transform: rotate3d(0,1,0,90deg);
+
+}
+.tooltip-effect4{
+	-webkit-transform: translate3d(0,-15px,0) ;
+	-moz-transform: translate3d(0,-15px,0);
+	transform: translate3d(0,-15px,0) ;
+}
+.tooltip-effect4 i{
+	-webkit-transform: translate3d(0,15px,0) ;
+	-moz-transform: translate3d(0,15px,0);
+	transform: translate3d(0,15px,0) ;
+}
+
+.tooltip-effect5 i{
+	-webkit-transform: translate3d(0,15px,0) ;
+	-moz-transform: translate3d(0,15px,0);
+	transform: translate3d(0,15px,0) ;
+}
+
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i {
+	opacity: 1;
+}
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i{
+	
+	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1) rotate3d(1,1,1,0);
+	-moz-transform: translate3d(0,0,0) scale3d(1,1,1) rotate3d(1,1,1,0);
+	transform: translate3d(0,0,0) scale3d(1,1,1) rotate3d(1,1,1,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	
+}
+
+
